@@ -7,6 +7,6 @@
 - Blog: /blog
 
 ## Site Info
-**Title:** My Portfolio
-**Description:** A modern portfolio website built with Next.js
-**Logo:** Portfolio
+**Title:** Exogenic
+**Description:** Affordable prosthetics for a better tomorrow
+**Logo:** Exogenic

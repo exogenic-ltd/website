@@ -23,7 +23,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
-              Portfolio
+              Exogenic <small>Pvt Ltd </small>
             </Link>
           </div>
 
@@ -53,7 +53,8 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-300 hover:text-blue-400 p-2"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? 
+              <><Menu size={24} /></> : <><Menu size={24} /></>}
             </button>
           </div>
         </div>

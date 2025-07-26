@@ -4,11 +4,10 @@ import { readMarkdownFile, getBlogPosts } from "@/lib/markdown-parser"
 
 export default function Blog() {
   const blogContent = readMarkdownFile("blog.md")
-  const blogPosts = getBlogPosts()
-  const featuredPost = blogPosts.find((post) => post.featured)
-  const regularPosts = blogPosts.filter((post) => !post.featured)
+  const featuredPost = blogContent.featuredPost;
+  const regularPosts = blogContent.blogPosts
 
-  const categories = blogContent.categories || ["All", "React", "Next.js", "TypeScript", "CSS", "Performance", "Trends"]
+  const categories = blogContent.categories || []
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -55,7 +54,7 @@ export default function Blog() {
                     </span>
                   </div>
                   <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">{featuredPost.title}</h2>
-                  <p className="text-gray-300 mb-6 text-lg">{featuredPost.excerpt}</p>
+                  <p className="text-gray-300 mb-6 text-lg">{featuredPost.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-400 space-x-4">
                       <div className="flex items-center">
@@ -81,7 +80,6 @@ export default function Blog() {
                     <div className="w-24 h-24 bg-blue-600/30 rounded-full flex items-center justify-center mb-4 mx-auto">
                       <span className="text-2xl">📝</span>
                     </div>
-                    <p className="text-blue-300 font-medium">Latest Article</p>
                   </div>
                 </div>
               </div>
@@ -91,7 +89,7 @@ export default function Blog() {
 
         {/* Blog Posts Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {regularPosts.map((post) => (
+          {regularPosts.map((post:any) => (
             <article
               key={post.id}
               className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group"
@@ -109,7 +107,7 @@ export default function Blog() {
                   {post.title}
                 </h3>
 
-                <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+                <p className="text-gray-300 mb-4 line-clamp-3">{post.description}</p>
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-400">
@@ -130,7 +128,7 @@ export default function Blog() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16">
+        {/* <div className="mt-16">
           <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               {blogContent.newsletter_section?.title || "Stay Updated"}
@@ -150,7 +148,7 @@ export default function Blog() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

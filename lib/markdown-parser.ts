@@ -23,61 +23,6 @@ export function readMarkdownFile(filename: string): ParsedContent {
   }
 }
 
-export function getProjects(): any[] {
-  const content = readMarkdownFile("projects.md")
-  const projects = []
-
-  // Look for project items
-  for (const key in content) {
-    if (key.startsWith("project_")) {
-      const projectData = content[key]
-      if (Array.isArray(projectData) && projectData.length > 0) {
-        const project = projectData[0]
-        projects.push({
-          id: projects.length + 1,
-          title: project.title || "Project Title",
-          description: project.description || "Project description",
-          image: project.image || "/placeholder.svg?height=300&width=500",
-          technologies: project.technologies?.split(", ") || [],
-          liveUrl: project.live_url || "#",
-          githubUrl: project.github_url || "#",
-          date: project.date || "2024",
-        })
-      }
-    }
-  }
-
-  // Fallback data
-  if (projects.length === 0) {
-    return [
-      {
-        id: 1,
-        title: "E-Commerce Platform",
-        description:
-          "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
-        image: "/placeholder.svg?height=300&width=500",
-        technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-        liveUrl: "#",
-        githubUrl: "#",
-        date: "2024",
-      },
-      {
-        id: 2,
-        title: "Task Management App",
-        description:
-          "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-        image: "/placeholder.svg?height=300&width=500",
-        technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-        liveUrl: "#",
-        githubUrl: "#",
-        date: "2023",
-      },
-    ]
-  }
-
-  return projects
-}
-
 export function getBlogPosts(): any[] {
   const content = readMarkdownFile("blog.md")
   const posts = []

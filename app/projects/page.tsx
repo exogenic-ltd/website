@@ -1,17 +1,15 @@
 import { ExternalLink, Github, Calendar } from "lucide-react"
-import { readMarkdownFile, getProjects } from "@/lib/markdown-parser"
+import { readMarkdownFile } from "@/lib/markdown-parser"
 
 export default function Projects() {
   const projectsContent = readMarkdownFile("projects.md")
-  const projects = getProjects()
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <div className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            {projectsContent.header?.title || "My"} <span className="text-blue-400">Projects</span>
+            {projectsContent.header?.title || "Our Projects"}
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             {projectsContent.header?.subtitle ||
@@ -21,11 +19,8 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group"
-            >
+          {projectsContent.projects.map((project:any) => (
+            <div key={project.id} className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group">
               {/* Project Image */}
               <div className="relative overflow-hidden">
                 <img

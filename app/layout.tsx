@@ -7,8 +7,8 @@ import Navbar from "@/components/navbar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A modern portfolio website built with Next.js",
+  title: "Exogenic Pvt Ltd",
+  description: "Building affordable prosthetics for a better tomorrow",
     generator: 'v0.dev'
 }
 
