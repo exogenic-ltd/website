@@ -1,9 +1,11 @@
 ---
+id: 2
 title: "Mr. Harindu Bandara"
 draft: false
 weight: 10
 fullName: "Harindu Dulanjaya Bandara"
 contact:
+  affiliation: "Assistant Lecturer, University of of Moratuwa, Sri Lanka"
   location: "Sri Lanka"
   phone: "+94 777 255 476"
   email: "harindudb@gmail.com"
@@ -15,8 +17,8 @@ contact:
     - name: "ORCID"
       url: "https://orcid.org/0009-0009-3360-8980"
 objective: "Mechanical engineer seeking opportunities to further expand my knowledge and skills, interested in pursuing a career in R&D related to the fields of Robotics and Bioengineering."
-education:
-  - degree: "Bachelor of Science in Mechanical Engineering"
+academicQualifications:
+  - degree: "Bsc.Hons Mechanical Engineering"
     institution: "University of Moratuwa, Katubedda"
     years: "2020 – 2024"
     details:

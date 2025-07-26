@@ -1,4 +1,5 @@
 ---
+id: 1
 title: "Prof. Ruwan Gopura"
 draft: false
 weight: 70
