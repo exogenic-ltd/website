@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 
 const navigation = [
@@ -16,6 +16,15 @@ const navigation = [
 export default function Navbar() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // Or a placeholder
+  }
 
   return (
     <nav className="bg-black border-b border-blue-500/20">
@@ -55,7 +64,7 @@ export default function Navbar() {
               className="text-gray-300 hover:text-blue-400 p-2"
             >
               {mobileMenuOpen ? 
-              <><Menu size={24} /></> : <><Menu size={24} /></>}
+              <><X size={24} /></> : <Menu size={14} />}
             </button>
           </div>
         </div>

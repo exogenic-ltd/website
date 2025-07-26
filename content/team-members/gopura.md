@@ -13,19 +13,23 @@ contact:
   wikipedia: "https://en.wikipedia.org/wiki/Ruwan_Gopura"
   orcid: "https://orcid.org/0000-0002-9977-4545"
 academicQualifications:
-  - degree: "Ph.D."
+  - id: 1
+    degree: "Ph.D."
     field: "Robotics and Intelligent Systems"
     university: "Saga University, Japan"
     years: "2006–2009"
-  - degree: "M.Eng."
+  - id: 2
+    degree: "M.Eng."
     field: "Manufacturing Systems Engineering"
     university: "University of Moratuwa, Sri Lanka"
     years: "2005–2009"
-  - degree: "B.Sc. Eng. (Hons)"
+  - id: 3
+    degree: "B.Sc. Eng. (Hons)"
     field: "Mechanical Engineering"
     university: "University of Moratuwa, Sri Lanka"
     years: "2000–2004"
-  - degree: "CIMA (UK)"
+  - id: 4
+    degree: "CIMA (UK)"
     level: "Intermediate Level completed"
 careerProgression:
   - role: "Dean"

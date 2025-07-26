@@ -18,7 +18,8 @@ contact:
       url: "https://orcid.org/0009-0009-3360-8980"
 objective: "Mechanical engineer seeking opportunities to further expand my knowledge and skills, interested in pursuing a career in R&D related to the fields of Robotics and Bioengineering."
 academicQualifications:
-  - degree: "Bsc.Hons Mechanical Engineering"
+  - id: 1
+    degree: "Bsc.Hons Mechanical Engineering"
     institution: "University of Moratuwa, Katubedda"
     years: "2020 – 2024"
     details:
@@ -27,17 +28,20 @@ academicQualifications:
       research: "Development of a Trans-radial prosthetic device"
       majorCoursework: ["Robotics", "Biomedical Engineering", "Control Systems", "Computer-Aided Engineering"]
       extraCurricular: ["Karate", "Classical Music Society"]
-  - degree: "CIMA Certificate Level"
+  - id: 2
+    degree: "CIMA Certificate Level"
     institution: "Wisdom Business Academy, Colombo"
     year: "2019"
     details:
       courses: ["Financial Accounting", "Management Accounting", "Economics", "Business Law"]
-  - degree: "G.C.E. Advanced Level"
+  - id: 3
+    degree: "G.C.E. A/L"
     institution: "Ananda College, Colombo"
     years: "2016–2018"
     details:
       member: ["Science Society", "IT Society"]
-  - degree: "G.C.E. Ordinary Level"
+  - id: 4
+    degree: "G.C.E. O/L"
     institution: "Vidura College, Sri Jayawardenepura Kotte"
     years: "2004–2015"
     details:

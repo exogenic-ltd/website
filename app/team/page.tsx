@@ -37,7 +37,7 @@ export default function Team() {
                 </div>
 
                 {/* members Grid */}
-                <div className="grid lg:grid-cols-2 gap-8">
+                <div className="grid lg:grid-cols-3 gap-8">
                     {teamMembers?.map((member: any) => (
                         <div key={member.id} className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group">
                             {/* member Image */}
@@ -54,10 +54,6 @@ export default function Team() {
                             <div className="p-6">
                                 <div className="flex items-center justify-between mb-3">
                                     <h3 className="text-xl font-bold text-white">{member.title}</h3>
-                                    <div className="flex items-center text-sm text-gray-400">
-                                        <Calendar className="h-4 w-4 mr-1" />
-                                        {member.date}
-                                    </div>
                                 </div>
 
                                 <p className="text-gray-300 mb-4 line-clamp-3">{member.contact.affiliation}</p>
@@ -66,7 +62,7 @@ export default function Team() {
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {member.academicQualifications.map((qualification: any) => (
                                         <span
-                                            key={qualification}
+                                            key={qualification.id}
                                             className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-500/30"
                                         >
                                             {qualification.degree}

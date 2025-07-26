@@ -3,14 +3,16 @@ header:
   title: "Our Projects"
   subtitle: "A collection of projects I've worked on, showcasing different technologies and problem-solving approaches."
 projects:
-  - title: "E-Commerce Platform"
+  - id: 1
+    title: "E-Commerce Platform"
     description: "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard."
     image: "/placeholder.svg?height=300&width=500"
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"]
     liveUrl: "#"
     gitHubUrl: "#"
     date: "2024"
-  - title: "Task Management App"
+  - id: 2
+    title: "Task Management App"
     description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features."
     image: "/placeholder.svg?height=300&width=500"
     technologies: ["React", "Node.js", "Socket.io", "MongoDB"]

@@ -51,15 +51,15 @@ export default function About() {
               <div className="space-y-3">
                 <div className="flex items-center text-gray-300">
                   <Mail className="h-5 w-5 text-blue-400 mr-3" />
-                  <span>{aboutContent.contact_info?.email || "hello@example.com"}</span>
+                  <span>{aboutContent.contactInfo?.email || "hello@example.com"}</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <MapPin className="h-5 w-5 text-blue-400 mr-3" />
-                  <span>{aboutContent.contact_info?.location || "San Francisco, CA"}</span>
+                  <span>{aboutContent.contactInfo?.location || "San Francisco, CA"}</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Calendar className="h-5 w-5 text-blue-400 mr-3" />
-                  <span>{aboutContent.contact_info?.status || "Available for new projects"}</span>
+                  <span>{aboutContent.contactInfo?.status || "Available for new projects"}</span>
                 </div>
               </div>
             </div>

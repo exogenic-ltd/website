@@ -10,7 +10,7 @@ content: |
 
   When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge through blog posts and community involvement.
 contactInfo:
-  email: "hello@example.com"
+  email: "hello@test.com"
   location: "San Francisco, CA"
   status: "Available for new projects"
 socialLinks:
