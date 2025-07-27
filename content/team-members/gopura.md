@@ -1,5 +1,6 @@
 ---
 id: 1
+firstName: "gopura"
 title: "Prof. Ruwan Gopura"
 draft: false
 weight: 70

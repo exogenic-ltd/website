@@ -2,16 +2,18 @@ import { ExternalLink, Calendar } from "lucide-react"
 import { readMarkdownFile } from "@/lib/markdown-parser"
 export default function Team() {
     const teamsContent = readMarkdownFile("team.md");
-    
+
     const getTeamMemberData = () => {
         let teamMemberData: any[];
         teamMemberData = [];
         if (teamsContent) {
             teamsContent.members.forEach((member: any) => {
-                try{
-                    let teamMemberDetails = readMarkdownFile(`/team-members/${member.name}.md`);
-                    teamMemberData.push(teamMemberDetails);
-                }catch(e){
+                try {
+                    if(member){
+                        let teamMemberDetails = readMarkdownFile(`/team-members/${member.name}.md`);
+                        teamMemberData.push(teamMemberDetails);
+                    }
+                } catch (e) {
                     console.log(e);
                 }
             });
@@ -55,12 +57,13 @@ export default function Team() {
                                 <div className="flex items-center justify-between mb-3">
                                     <h3 className="text-xl font-bold text-white">{member.title}</h3>
                                 </div>
-
-                                <p className="text-gray-300 mb-4 line-clamp-3">{member.contact.affiliation}</p>
-
+                                {member.contact?.affiliation && 
+                                    <p className="text-gray-300 mb-4 line-clamp-3">{member.contact.affiliation}</p>
+                                }
+                            
                                 {/* Technologies */}
                                 <div className="flex flex-wrap gap-2 mb-6">
-                                    {member.academicQualifications.map((qualification: any) => (
+                                    {member.academicQualifications?.map((qualification: any) => (
                                         <span
                                             key={qualification.id}
                                             className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-500/30"
@@ -72,13 +75,15 @@ export default function Team() {
 
                                 {/* member Links */}
                                 <div className="flex space-x-4">
-                                    <a
-                                        href={member.liveUrl}
-                                        className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                                    >
-                                        <ExternalLink className="h-4 w-4 mr-2" />
-                                        Profile
-                                    </a>
+                                    {member.firstName &&
+                                        <a
+                                            href={`/member?name=${member.firstName}`}
+                                            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                        >
+                                            <ExternalLink className="h-4 w-4 mr-2" />
+                                            Profile
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </div>

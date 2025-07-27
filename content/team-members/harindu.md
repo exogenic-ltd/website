@@ -1,5 +1,6 @@
 ---
 id: 2
+firstName: "harindu"
 title: "Mr. Harindu Bandara"
 draft: false
 weight: 10
