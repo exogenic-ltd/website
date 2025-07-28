@@ -47,7 +47,7 @@ academicQualifications:
     years: "2004–2015"
     details:
       extraCurricular: ["Scouting"]
-professionalExperience:
+careerProgression:
   - role: "Temporary Instructor"
     institution: "University of Moratuwa, Katubedda"
     year: "2025"

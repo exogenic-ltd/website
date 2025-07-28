@@ -13,24 +13,32 @@ import {
   FileText,
   TrendingUp,
   Star,
+  Settings,
+  Lightbulb,
+  Presentation,
 } from "lucide-react"
+import ProfilePhoto from "./ProfilePhoto";
 
 
 export default function MemberProfile(profileName: any) {
   console.log(profileName);
   const profile = readMarkdownFile(`/team-members/${profileName.profileName}.md`);
-  
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div>
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
+          {/* Profile Photo */}
+          <div className="mb-8">
+            <ProfilePhoto src={profile.profileImageUrl} alt={profile.fullName} size="xl" className="mb-6" />
+          </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">{profile.title}</h1>
           <h2 className="text-2xl text-blue-400 mb-6">{profile.fullName}</h2>
-          {profile.contact.affiliation && 
+          {profile.contact.affiliation &&
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">{profile.contact.affiliation}</p>
           }
-          
+
           {/* Contact Links */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <a
@@ -155,7 +163,34 @@ export default function MemberProfile(profileName: any) {
                 </div>
               </div>
             }
-          
+
+            {/* Projects and Research */}
+            {profile.projectsAndResearch &&
+              <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <Lightbulb className="h-6 w-6 text-blue-400 mr-3" />
+                  Projects & Research
+                </h3>
+                <div className="space-y-6">
+                  {profile.projectsAndResearch.map((project: any, index: number) => (
+                    <div key={index} className="border-l-2 border-blue-500/30 pl-4">
+                      <div className="text-lg font-semibold text-white mb-2">{project.title}</div>
+                      <div className="text-blue-400 mb-1">{project.institution}</div>
+                      <div className="text-sm text-gray-400 mb-3">{project.years || project.year}</div>
+                      <ul className="space-y-1">
+                        {project.details.map((detail: string, index: number) => (
+                          <li key={index} className="text-gray-300 text-sm flex items-start">
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            }
+
             {/* Awards */}
             {
               profile.awards &&
@@ -217,6 +252,112 @@ export default function MemberProfile(profileName: any) {
                 ))}
               </div>
             </div>
+
+            {profile.skillsAndCertifications &&
+              <>
+                {/* Skills & Certifications */}
+                <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
+                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                    <Settings className="h-6 w-6 text-blue-400 mr-3" />
+                    Skills & Certifications
+                  </h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-400 mb-3">Programming Languages</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {profile.skillsAndCertifications.languages.map((lang:string, index:number) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-500/30"
+                          >
+                            {lang}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-400 mb-3">Design & Simulation</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {profile.skillsAndCertifications.designAndSimulation.map((skill:string, index:number) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-green-600/20 text-green-400 text-sm rounded-full border border-green-500/30"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-400 mb-3">AI/ML</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {profile.skillsAndCertifications?.aiMl?.map((skill:string, index:number) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-purple-600/20 text-purple-400 text-sm rounded-full border border-purple-500/30"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-400 mb-3">Analysis Tools</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {profile.skillsAndCertifications.analysisTools.map((tool:string, index:number) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-orange-600/20 text-orange-400 text-sm rounded-full border border-orange-500/30"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-400 mb-3">Communication</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {profile.skillsAndCertifications.communication.map((cert:string, index:number) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-yellow-600/20 text-yellow-400 text-sm rounded-full border border-yellow-500/30"
+                          >
+                            {cert}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            }
+
+            {/* Conference Participation */}
+            {profile.conferences &&
+              <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                  <Presentation className="h-6 w-6 text-blue-400 mr-3" />
+                  Conference Participation
+                </h3>
+                <div className="space-y-4">
+                  {profile.conferences.map((conf: any, index: number) => (
+                    <div key={index} className="border-l-2 border-blue-500/30 pl-4">
+                      <div className="text-lg font-semibold text-white">{conf.name}</div>
+                      <div className="text-blue-400">{conf.institution}</div>
+                      <div className="text-sm text-gray-400 mb-2">{conf.year}</div>
+                      <ul className="space-y-1">
+                        {conf.details.map((detail: string, index: number) => (
+                          <li key={index} className="text-gray-300 text-sm flex items-start">
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            }
 
             {/* Research Outputs */}
             {profile.researchOutputs &&

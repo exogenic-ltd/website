@@ -5,6 +5,7 @@ title: "Prof. Ruwan Gopura"
 draft: false
 weight: 70
 fullName: "R. A. Ruwan C. Gopura"
+profileImageUrl: "../../assets/images/placeholder.svg"
 contact:
   email: "gopurar@uom.lk"
   affiliation: "Department of Mechanical Engineering, University of of Moratuwa, Sri Lanka"
