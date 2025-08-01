@@ -4,11 +4,12 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
+import LogoGeometric from "./logo"
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Team", href: "/team"},
+  { name: "Team", href: "/team" },
   { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
 ]
@@ -30,10 +31,9 @@ export default function Navbar() {
     <nav className="bg-black border-b border-blue-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
-              Exogenic <small>Pvt Ltd </small>
+            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <LogoGeometric size="md" showText={true} />
             </Link>
           </div>
 
@@ -46,9 +46,8 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive ? "bg-blue-600 text-white" : "text-gray-300 hover:bg-blue-500/10 hover:text-blue-400"
-                    }`}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-300 hover:bg-blue-500/10 hover:text-blue-400"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -63,8 +62,8 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-300 hover:text-blue-400 p-2"
             >
-              {mobileMenuOpen ? 
-              <><X size={24} /></> : <Menu size={14} />}
+              {mobileMenuOpen ?
+                <><X size={24} /></> : <Menu size={14} />}
             </button>
           </div>
         </div>
@@ -79,9 +78,8 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      isActive ? "bg-blue-600 text-white" : "text-gray-300 hover:bg-blue-500/10 hover:text-blue-400"
-                    }`}
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-300 hover:bg-blue-500/10 hover:text-blue-400"
+                      }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
