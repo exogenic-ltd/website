@@ -1,5 +1,6 @@
 import { ExternalLink, Calendar } from "lucide-react"
 import { readMarkdownFile } from "@/lib/markdown-parser"
+import ProfilePhoto from "../member/components/ProfilePhoto";
 export default function Team() {
     const teamsContent = readMarkdownFile("team.md");
 
@@ -47,7 +48,7 @@ export default function Team() {
                                 <img
                                     src={member.image || "/placeholder.svg"}
                                     alt={member.title}
-                                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                    className="object-cover rounded-full p-12 border-5 pd-12 border-blue-500/30 shadow-2xl transition-opacity duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                             </div>

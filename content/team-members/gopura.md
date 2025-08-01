@@ -9,11 +9,17 @@ profileImageUrl: "../../assets/images/placeholder.svg"
 contact:
   email: "gopurar@uom.lk"
   affiliation: "Department of Mechanical Engineering, University of of Moratuwa, Sri Lanka"
-  officialPage: "https://uom.lk/staff/Gopura.RARC.php"
-  googleScholar: "https://scholar.google.com/citations?user=C4aX6bkAAAAJ&hl=en"
-  researchGate: "https://www.researchgate.net/profile/Ruwan_Gopura"
-  wikipedia: "https://en.wikipedia.org/wiki/Ruwan_Gopura"
-  orcid: "https://orcid.org/0000-0002-9977-4545"
+  links:
+    - name: "googleScholar"
+      url: "https://scholar.google.com/citations?user=C4aX6bkAAAAJ&hl=en"
+    - name: "researchGate"
+      url: "https://www.researchgate.net/profile/Ruwan_Gopura"
+    - name: "orcid"
+      url: "https://orcid.org/0000-0002-9977-4545"
+    - name: "wikipedia"
+      url: "https://en.wikipedia.org/wiki/Ruwan_Gopura"
+    - name: "officialPage"
+      url: "https://uom.lk/staff/Gopura.RARC.php"
 academicQualifications:
   - id: 1
     degree: "Ph.D."

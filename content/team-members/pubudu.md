@@ -1,27 +1,32 @@
 ---
 id: 5
 title: "Dr. Pubudu Ranaweera"
+firstName: "pubudu"
+profileImageUrl: "./pubudu.jpg"
 draft: false
 weight: 80
 fullName: "R.K. Pubudu Sampath Ranaweera"
 contact:
-  location: "University of Moratuwa, Sri Lanka"
-  phone: "+94 11 265 0301 ext. 4518"
-  mobile: "+94 71 785 5720"
+  affiliation: "Senior Lecturer, University of Moratuwa, Sri Lanka"
   email: "pubudur@uom.lk"
-  googleScholar: "https://scholar.google.com/citations?user=9cVr8WkAAAAJ&hl=en"
-qualifications:
-  - degree: "PhD"
+  links:
+    - name: "GoogleScholar"
+      url: "https://scholar.google.com/citations?user=9cVr8WkAAAAJ&hl=en"
+academicQualifications:
+  - id: 1
+    degree: "PhD"
     field: "Biomedical Engineering"
     institution: "University of Moratuwa, Sri Lanka"
     year: "2024"
-  - degree: "Erasmus Mundus Joint Masters – Computational Mechanics"
+  - id: 2
+    degree: "Erasmus Mundus Joint Masters – Computational Mechanics"
     year: "2010"
     institutions: ["Ecole Centrale de Nantes, France", "Swansea University, UK"]
     details:
       - "Distinction"
       - "Erasmus Mundus Scholarship"
-  - degree: "BSc (Hons) in Mechanical Engineering"
+  - id: 3
+    degree: "BSc (Hons) in Mechanical Engineering"
     year: "2004"
     institution: "University of Moratuwa, Sri Lanka"
     details:
@@ -31,40 +36,35 @@ researchInterests:
   - "Biorobotics"
   - "Bionics (Prosthetics, Orthotics, Exoskeletons)"
   - "CAD, FEA, CFD"
-honoursAwards:
+awards:
   - name: "Outstanding Research Performances"
-    institution: "UoM"
-    subAwards:
-      - name: "Award of Excellence"
-        details: "with Distinction"
-        years: ["2018", "2019", "2021", "2022"]
+    details : "N/A"
+    year : "N/A"
+  - name: "Award of Excellence"
+    details: "with Distinction"
+    year: "2018, 2019, 2021, 2022"
   - name: "Best Paper Awards"
     details:
       - "MERCon (2016–2019, 2021)"
       - "ICITR (2023, 2024)"
       - "MIES (2016)"
-teachingExperience:
-  universityOfMoratuwa:
+careerProgression:
+  - role: "Lecturer"
     institution: "University of Moratuwa"
-    years: "2005–Present"
-    roles:
-      - role: "Senior Lecturer GI"
-        years: "2018–Present"
-      - role: "Senior Lecturer GII"
-        years: "2012–2018"
-      - role: "Lecturer"
-        years: "2005–2012"
-    courses:
-      - "Mechanical Design"
-      - "Manufacturing Engineering"
-      - "Biomedical Engineering"
-      - "CAD/CAM & CAE"
-  oceanUniversityOfSriLanka:
+    years: "2005–2012"
+  - role: "Senior Lecturer GII"
+    institution: "University of Moratuwa"
+    years : "2012–2018"
+  - role: "Senior Lecturer GI"
+    "institution": "University of Moratuwa"
+    years: "2005–2012"
+  - role: "Visiting Lecturer"
     institution: "Ocean University of Sri Lanka"
     years: "2011–2021"
-    role: "Visiting Lecturer"
-    subjects: ["Manufacturing", "CAD & Drafting"]
-professionalAffiliations:
-  - affiliation: "Associate Member, IESL"
-    since: "2004"
+    tools: ["Manufacturing", "CAD & Drafting"]
+skillsAndCertifications:
+      designAndSimulation: ["Mechanical Design", "CAD/CAM & CAE"]
+      other : ["Manufacturing Engineering", "Biomedical Engineering"]
+extracurriculars:
+  - "Associate Member, IESL (2018 - Present)"
 ---

@@ -1,14 +1,13 @@
 ---
 id: 2
 firstName: "harindu"
+profileImageUrl: "./harindu.jpg"
 title: "Mr. Harindu Bandara"
 draft: false
 weight: 10
 fullName: "Harindu Dulanjaya Bandara"
 contact:
   affiliation: "Assistant Lecturer, University of of Moratuwa, Sri Lanka"
-  location: "Sri Lanka"
-  phone: "+94 777 255 476"
   email: "harindudb@gmail.com"
   links:
     - name: "LinkedIn"
@@ -17,7 +16,6 @@ contact:
       url: "https://github.com/Altimerra"
     - name: "ORCID"
       url: "https://orcid.org/0009-0009-3360-8980"
-objective: "Mechanical engineer seeking opportunities to further expand my knowledge and skills, interested in pursuing a career in R&D related to the fields of Robotics and Bioengineering."
 academicQualifications:
   - id: 1
     degree: "Bsc.Hons Mechanical Engineering"
@@ -111,16 +109,16 @@ skillsAndCertifications:
   designAndSimulation: ["3D Modelling", "Mechanical Design", "Finite Element Analysis", "Control Systems"]
   analysisTools: ["COMSOL", "MATLAB/Simulink"]
   writing: ["Research papers", "Technical Reports", "Patent Drafting"]
-  aiMl: ["Data Preprocessing", "Model Training & Selection", "Deployment"]
+  other: ["Data Preprocessing", "Model Training & Selection", "Deployment"]
 scholarshipsAndAwards:
   - name: "University Scholarship Scheme"
     institution: "Ceylon Petroleum Storage Terminals Ltd."
     years: "2021–2024"
   - name: "Academic Performance Award"
     institution: "Ananda College"
-    year: "2019"
+    years: "2019"
   - name: "Best in Mathematics and English"
     institution: "Vidura College"
-    year: "2015"
+    years: "2015"
 ---
 # This section can be left empty as all structured content is now in the front matter.

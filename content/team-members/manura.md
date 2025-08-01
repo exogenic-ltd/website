@@ -1,12 +1,13 @@
 ---
 id: 4
 title: "Mr. Manura De Silva"
+firstName: "manura"
+profileImageUrl: "./manura.jpg"
 draft: false
 weight: 20
 fullName: "Manura Jithmal De Silva"
 contact:
-  address: "331/15A, Hittetiya-West, Matara, Sri Lanka"
-  phone: "+94 71 627 3207"
+  affiliation: "Lecturer, University of of Moratuwa, Sri Lanka"
   email: "manurajithmal@gmail.com"
   links:
     - name: "LinkedIn"
@@ -15,9 +16,9 @@ contact:
       url: "https://www.researchgate.net/profile/Manura-De-Silva"
     - name: "Portfolio"
       url: "https://manuradesilva.myportfolio.com"
-objective: "Passionate and motivated graduate researcher with interdisciplinary experience in Mechanical Engineering, Biomechanics, and Rehabilitation Robotics. Seeking opportunities to contribute to research and teaching while pursuing innovations at the intersection of Engineering, Healthcare, and Sports Science."
-education:
-  - degree: "MSc (Research) – Mechanical Engineering"
+academicQualifications:
+  - id: 1
+    degree: "MSc (Research) – Mechanical Engineering"
     status: "In Progress"
     institution: "University of Moratuwa, Sri Lanka"
     years: "Apr 2022 – Present"
@@ -25,7 +26,8 @@ education:
       thesis: "Robotic Ankle Exoskeleton for Therapeutic Exercises"
       focus: ["Rehabilitation Robotics", "Stroke Recovery"]
       expectedCompletion: "Aug 2025"
-  - degree: "BSc (Hons) – Mechanical Engineering"
+  - id: 2
+    degree: "BSc (Hons) – Mechanical Engineering"
     institution: "University of Moratuwa, Sri Lanka"
     years: "Graduated: 2019"
     details:
@@ -43,7 +45,7 @@ researchExperience:
     status: "Ongoing"
     institution: "Imperial College London (Remote)"
     description: "Lower-limb prosthetic device design for through-knee amputees"
-teachingExperience:
+careerProgression:
   - role: "Visiting Lecturer"
     institution: "Informatics Institute of Technology"
     years: "2023–Present"
@@ -59,76 +61,61 @@ teachingExperience:
     years: "2022–Present"
     courses: ["Biomechanics", "Robotics"]
     tools: ["Vicon", "EEG/EMG systems", "MATLAB", "Python"]
-industrialExperience:
   - role: "Mechanical Engineer (MEP)"
     institution: "BSEC Pvt Ltd"
     years: "2019–2021"
   - role: "Automation Intern"
     institution: "MAS Intimates"
-    year: "2017"
+    years: "2017"
   - role: "Intern"
     institution: "Alta Vision Solar"
-    year: "2014"
-biomechanicsAndSportsScience:
-  role: "Volunteer Biomechanics Analyst"
-  institution: "Institute of Sports Medicine, SL"
-  years: "2023–Present"
-  tools: ["Vicon", "Delsys EMG", "AMTI Force Plates"]
-  projects: ["Gait", "sports motion (e.g., cricket, lifting)"]
-supervision:
-  role: "Final Year Project Co-Supervisor"
-  institution: "University of Moratuwa"
-  years: "2022–2024"
-  projects: ["Rehab robotics", "prosthetics"]
-  details: "Supporting commercialization"
-entrepreneurialActivities:
-  role: "Co-Founder & Director"
-  company: "ExoGenic Pvt Ltd"
-  years: "2024–Present"
-  focus: "Focused on assistive and rehab tech"
-  currentProject: "Upper-limb rehab device"
-skills:
-  engineeringAndResearch: ["SolidWorks", "MATLAB", "COMSOL", "Arduino", "ROS"]
-  biomechanicsTools: ["Vicon", "Delsys EMG", "Force Plates"]
-  programming: ["Python", "C/C++", "Arduino IDE"]
-  softSkills: ["Presentation", "Team Collaboration", "Project Coordination"]
-certifications:
-  - name: "Vicon Motion Capture Training"
-    year: "2023"
-  - name: "IESL CPD: HVAC and A/C Systems Design"
-    year: "2021"
+    years: "2014"
+  - role: "Volunteer Biomechanics Analyst"
+    institution: "Institute of Sports Medicine, SL"
+    years: "2023–Present"
+    tools: ["Vicon", "Delsys EMG", "AMTI Force Plates"]
+    projects: ["Gait", "sports motion (e.g., cricket, lifting)"]
+  - role: "Final Year Project Co-Supervisor"
+    institution: "University of Moratuwa"
+    years: "2022–2024"
+    projects: ["Rehab robotics", "prosthetics"]
+    details: "Supporting commercialization"
+  - role: "Co-Founder & Director"
+    company: "ExoGenic Pvt Ltd"
+    years: "2024–Present"
+    focus: "Focused on assistive and rehab tech"
+    currentProject: "Upper-limb rehab device"
+skillsAndCertifications:
+  certifications: ["Vicon Motion Capture Training - 2023", "IESL CPD: HVAC and A/C Systems Design - 2021"]
+  designAndSimulation: ["SolidWorks", "MATLAB", "COMSOL", "Arduino", "ROS"]
+  analysisTools: ["Vicon", "Delsys EMG", "Force Plates"]
+  languages: ["Python", "C/C++", "Arduino IDE"]
 publications:
-  journals:
     - title: "Developments in circular external fixators"
-      journal: "Injury"
+      institution: "University of Moratuwa"
+      name: "Injury"
       year: "2023"
-  conferences:
-    - title: "ChairX – Exoskeleton Chair"
-      conference: "ICORR"
-      year: "2019"
-    - title: "Multiple MERCon/ICITR papers on robotic hands, mobility devices, etc."
-  abstracts:
-    - title: "Fixator tension stability"
-      conference: "ICBEB"
-      year: "2023"
-  magazines:
     - title: "Will the new circular fixator ease the burden?"
-      magazine: "Bolgoda Plains"
-intellectualProperty:
+      name: "Bolgoda Plains"
+conferences:
+    - name: "ChairX – Exoskeleton Chair"
+      institution: "ICORR"
+      year: "2019"
+      details:
+      - "Multiple MERCon/ICITR papers on robotic hands, mobility devices, etc."
+    - name: "Fixator tension stability"
+      institution: "ICBEB"
+      year: "2023"
+projectsAndResearch:
   - title: "Wire Clamping Mechanism for External Fixators"
     year: "2024"
-    status: "Pending"
+    institution: "Bionics Lab, University of Moratuwa"
   - title: "Underactuated Manipulator Joint Control"
     year: "2025"
-    status: "Pending"
+    institution: "Bionics Lab, University of Moratuwa"
 extracurriculars:
   - "Assistant Secretary & Treasurer – IEEE EMBS SL Chapter"
   - "Secretary – Dancing Society (UoM)"
   - "IEEE SS12 IoT Organizing Committee"
   - "NSB Achiever’s Award – 2014"
-personal:
-  dob: "04 Oct 1993"
-  nic: "199327804971"
-  nationality: "Sri Lankan"
-  gender: "Male"
 ---

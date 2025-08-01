@@ -5,8 +5,17 @@ header:
 members:
   - id: 1
     name: "gopura"
-  - id : 2
+  - id: 2
+    name: "pubudu"
+  - id: 3
+    name: "manura"
+  - id: 4
     name: "harindu"
+  - id: 5
+    name: "kulunu"
+  - id: 6
+    name: "vimukthi"
+
 ctaSection:
   title: "Interested in Working Together?"
   description: "I'm always open to discussing new opportunities and interesting projects."
