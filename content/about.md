@@ -2,13 +2,9 @@
 pageTitle: "About Page Content"
 header:
   title: "About Exogenic"
-  subtitle: "Passionate developer with a love for creating innovative solutions and beautiful user experiences."
+  subtitle: "Creating a world where physical limitations don’t define possibilities – where every person has access to the assistive technology they need to thrive."
 content: |
-  I'm a dedicated full-stack developer with over 5 years of experience in creating web applications that solve real-world problems. My journey began with a curiosity about how websites work, and it has evolved into a passion for crafting exceptional digital experiences.
-
-  I specialize in modern web technologies including React, Next.js, Node.js, and various databases. I believe in writing clean, maintainable code and following best practices to deliver high-quality solutions.
-
-  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge through blog posts and community involvement.
+  ExoGenic (Pvt) Ltd is a pioneering MedTech startup focused on developing smart, accessible medical and assistive devices. Founded with the mission to make advanced prosthetics available to everyone, we’re breaking down barriers through innovative design, local manufacturing, and community-centered support.
 contactInfo:
   email: "hello@test.com"
   location: "San Francisco, CA"

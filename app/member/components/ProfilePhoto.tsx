@@ -19,26 +19,11 @@ const sizeClasses = {
 
 export default function ProfilePhoto({ src, alt, size = "lg", className = "" }: ProfilePhotoProps) {
   const [imageError, setImageError] = useState(false)
-  const [imageLoading, setImageLoading] = useState(true)
-
   const handleImageError = () => {
     setImageError(true)
-    setImageLoading(false)
   }
-
-  const handleImageLoad = () => {
-    setImageLoading(false)
-  }
-
   return (
     <div className={`relative ${sizeClasses[size]} mx-auto ${className}`}>
-      {/* Loading placeholder */}
-      {imageLoading && (
-        <div className="absolute inset-0 rounded-full bg-gray-700 animate-pulse flex items-center justify-center">
-          <User className="w-1/3 h-1/3 text-gray-500" />
-        </div>
-      )}
-
       {/* Error fallback */}
       {imageError && (
         <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-700 to-gray-800 border-4 border-blue-500/30 flex items-center justify-center">
@@ -51,11 +36,8 @@ export default function ProfilePhoto({ src, alt, size = "lg", className = "" }: 
         <img
           src={src || "/placeholder.svg"}
           alt={alt}
-          className={`w-full h-full object-cover rounded-full border-4 border-blue-500/30 shadow-2xl transition-opacity duration-300 ${
-            imageLoading ? "opacity-0" : "opacity-100"
-          }`}
+          className={`w-full h-full object-cover rounded-full border-4 border-blue-500/30 shadow-2xl transition-opacity duration-300 opacity-100`}
           onError={handleImageError}
-          onLoad={handleImageLoad}
         />
       )}
 

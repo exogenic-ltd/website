@@ -44,13 +44,8 @@ export default function Team() {
                     {teamMembers?.map((member: any) => (
                         <div key={member.id} className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group">
                             {/* member Image */}
-                            <div className="relative overflow-hidden">
-                                <img
-                                    src={member.image || "/placeholder.svg"}
-                                    alt={member.title}
-                                    className="object-cover rounded-full p-12 border-5 pd-12 border-blue-500/30 shadow-2xl transition-opacity duration-300"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                            <div className="p-5">
+                                <ProfilePhoto src={member.profileImageUrl || "/placeholder.svg"} alt={member.title} size="xl" className="mb-6" />
                             </div>
 
                             {/* member Content */}

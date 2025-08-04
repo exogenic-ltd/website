@@ -33,7 +33,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
             <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
-              <h2 className="text-2xl font-bold text-white mb-6">My Story</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">Company Overview</h2>
               <div className="space-y-4 text-gray-300">
                 {(aboutContent.content || "Default story content")
                   .split("\n\n")

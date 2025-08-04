@@ -23,16 +23,18 @@ import ProfilePhoto from "./ProfilePhoto";
 
 export default function MemberProfile(profileName: any) {
   const profile = readMarkdownFile(`/team-members/${profileName.profileName}.md`);
-
   return (
     <div>
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
           {/* Profile Photo */}
-          <div className="mb-8">
-            <ProfilePhoto src={profile.profileImageUrl} alt={profile.fullName} size="xl" className="mb-6" />
-          </div>
+          {
+            profile.profileImageUrl &&
+            <div className="mb-8">
+              <ProfilePhoto src={profile.profileImageUrl || "/placeholder.svg"} alt={profile.fullName} size="xl" className="mb-6" />
+            </div>
+          }
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">{profile.title}</h1>
           <h2 className="text-2xl text-blue-400 mb-6">{profile.fullName}</h2>
           {/* Contact Links */}
@@ -52,12 +54,12 @@ export default function MemberProfile(profileName: any) {
             {profile.contact?.links?.map((link: any, index: number) => (
               <div key={index} className="border-l-2 border-blue-500/30 pl-4">
                 <a
-                href={`${link.url}`}
-                className="flex items-center px-4 py-2 border border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500/10 transition-colors"
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                {link.name}
-              </a>
+                  href={`${link.url}`}
+                  className="flex items-center px-4 py-2 border border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500/10 transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  {link.name}
+                </a>
               </div>
             ))}
           </div>

@@ -1,7 +1,7 @@
 ---
 id: 2
 firstName: "harindu"
-profileImageUrl: "./harindu.jpg"
+profileImageUrl: "team-member/default.jpg"
 title: "Mr. Harindu Bandara"
 draft: false
 weight: 10
