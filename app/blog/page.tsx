@@ -67,7 +67,7 @@ export default function Blog() {
                       </div>
                     </div>
                     <Link
-                      href={`/blog/${featuredPost.slug}`}
+                      href={`/blog-posts/?slug=${featuredPost.slug}`}
                       className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
                     >
                       Read More
@@ -115,7 +115,7 @@ export default function Blog() {
                     {new Date(post.date).toLocaleDateString()}
                   </div>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/blog-posts/?slug=${post.slug}`}
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm"
                   >
                     Read More
