@@ -1,27 +1,20 @@
 ---
 header:
   title: "Our Projects"
-  subtitle: "A collection of projects I've worked on, showcasing different technologies and problem-solving approaches."
+  subtitle: "We Strive to make technology readliy available and affordable to our clients"
 projects:
   - id: 1
-    title: "E-Commerce Platform"
-    description: "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard."
+    shortname: "dexios"
+    title: "Project Dexios: Developing Affordable & Advanced Myoelectric Prostheses"
+    description: "The Dexios Hand represents our flagship innovation – a transradial prosthetic arm with adaptive grasping capabilities that combines advanced functionality with unprecedented affordability."
     image: "/placeholder.svg?height=300&width=500"
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"]
+    features: ["Precision Control", "Adaptive Strength", "Easy Maintenance", "Long Battery Life"]
     liveUrl: "#"
     gitHubUrl: "#"
     date: "2024"
-  - id: 2
-    title: "Task Management App"
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features."
-    image: "/placeholder.svg?height=300&width=500"
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"]
-    liveUrl: "#"
-    gitHubUrl: "#"
-    date: "2023"
 ctaSection:
   title: "Interested in Working Together?"
-  description: "I'm always open to discussing new opportunities and interesting projects."
+  description: "We are always open to discussing new opportunities and interesting projects."
   buttonText: "Get in Touch"
   buttonLink: "/about"
 ---
