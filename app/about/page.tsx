@@ -53,27 +53,27 @@ export default function About() {
                   <Mail className="h-5 w-5 text-blue-400 mr-3" />
                   <span>{aboutContent.contactInfo?.email || "hello@example.com"}</span>
                 </div>
-                <div className="flex items-center text-gray-300">
+                {/* <div className="flex items-center text-gray-300">
                   <MapPin className="h-5 w-5 text-blue-400 mr-3" />
                   <span>{aboutContent.contactInfo?.location || "San Francisco, CA"}</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Calendar className="h-5 w-5 text-blue-400 mr-3" />
                   <span>{aboutContent.contactInfo?.status || "Available for new projects"}</span>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Social Links */}
             <div className="bg-gray-800/50 p-6 rounded-lg border border-blue-500/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Connect With Me</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Connect With Us </h3>
               <div className="flex space-x-4">
-                <a
+                {/* <a
                   href={aboutContent.social_links?.github || "#"}
                   className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <Github className="h-6 w-6" />
-                </a>
+                </a> */}
                 <a
                   href={aboutContent.social_links?.linkedin || "#"}
                   className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"

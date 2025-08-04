@@ -23,6 +23,17 @@ import ProfilePhoto from "./ProfilePhoto";
 
 export default function MemberProfile(profileName: any) {
   const profile = readMarkdownFile(`/team-members/${profileName.profileName}.md`);
+
+  if (!profile) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-white text-center">
+        <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
+        <p className="text-xl text-gray-400">Could not load details for project: {profileName.profileName}</p>
+      </div>
+    );
+  }
+
+
   return (
     <div>
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
