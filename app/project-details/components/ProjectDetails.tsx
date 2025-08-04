@@ -1,22 +1,22 @@
 import { readMarkdownFile } from "@/lib/markdown-parser"
 import {
-  Zap, 
-  MapPin, 
-  Lightbulb, 
-  FlaskConical, 
-  Hand, 
-  DollarSign, 
-  Rocket, 
-  Users, 
-  ClipboardList, 
-  Target, 
+  Zap,
+  MapPin,
+  Lightbulb,
+  FlaskConical,
+  Hand,
+  DollarSign,
+  Rocket,
+  Users,
+  ClipboardList,
+  Target,
   Wrench,
-  Calendar, 
+  Calendar,
 } from "lucide-react"
 
 export default function ProjectDetails(projectName: any) {
   const project = readMarkdownFile(`/projects/${projectName.projectName}.md`);
-  
+
   if (!project) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-white text-center">
@@ -46,8 +46,8 @@ export default function ProjectDetails(projectName: any) {
             </h2>
             {project.technicalSpecifications.map((specGroup: any, groupIndex: number) => (
               <div key={groupIndex} className="mb-8 last:mb-0">
-                {specGroup.heading && (
-                  <h3 className="text-2xl font-semibold text-blue-400 mb-4">{specGroup.heading}</h3>
+                {specGroup.tagline && (
+                  <h3 className="text-2xl font-semibold text-blue-400 mb-4">{specGroup.tagline}</h3>
                 )}
                 <div className="grid md:grid-cols-2 gap-6">
                   {specGroup.features?.map((feature: any, featureIndex: number) => (
@@ -127,29 +127,33 @@ export default function ProjectDetails(projectName: any) {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-2xl font-semibold text-blue-400 mb-4">Accessible Pricing</h3>
-                {project.pricingAndAvailability.accessiblePricing && (
+                {project.pricingAndAvailability.tagline &&
+                  (<h3 className="text-2xl font-semibold text-blue-400 mb-4">{project.pricingAndAvailability.tagline}</h3>)
+                }
+                {project.pricingAndAvailability.pricingDetails && (
                   <>
                     <p className="text-white text-xl mb-2">
-                      <span className="font-bold">{project.pricingAndAvailability.accessiblePricing.product}:</span>{" "}
-                      {project.pricingAndAvailability.accessiblePricing.price}
+                      <span className="font-bold">{project.pricingAndAvailability.pricingDetails.product}:</span>{" "}
+                      {project.pricingAndAvailability.pricingDetails.price}
                     </p>
                     <ul className="list-disc list-inside text-gray-300 space-y-1">
-                      {project.pricingAndAvailability.accessiblePricing.advantages?.map((advantage: string, index: number) => (
+                      {project.pricingAndAvailability.pricingDetails.advantages?.map((advantage: string, index: number) => (
                         <li key={index}>{advantage}</li>
                       ))}
                     </ul>
                   </>
                 )}
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-blue-400 mb-4">Compare with Alternatives</h3>
-                {project.pricingAndAvailability.compareWithAlternatives?.map((alt: any, index: number) => (
-                  <p key={index} className="text-gray-300 mb-2">
-                    <span className="font-semibold">{alt.name}:</span> {alt.price}
-                  </p>
-                ))}
-              </div>
+              {project.pricingAndAvailability.alternativeComparison &&
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-400 mb-4">Compare with Alternatives</h3>
+                  {project.pricingAndAvailability.alternativeComparison?.map((alt: any, index: number) => (
+                    <p key={index} className="text-gray-300 mb-2">
+                      <span className="font-semibold">{alt.name}:</span> {alt.price}
+                    </p>
+                  ))}
+                </div>
+              }
             </div>
           </div>
         )}

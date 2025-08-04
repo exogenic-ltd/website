@@ -3,7 +3,7 @@ title: "Project Dexios: Developing Affordable & Advanced Myoelectric Prostheses"
 overview:
   tagline: "The Dexios Hand represents our flagship innovation – a transradial prosthetic arm with adaptive grasping capabilities that combines advanced functionality with unprecedented affordability."
 technicalSpecifications:
-  - heading: "Advanced Engineering"
+  - tagline: "Advanced Engineering"
     features:
       - name: "Myoelectric Control"
         description: "Bio-signal control system that responds to muscle contractions, providing intuitive and natural movement control."
@@ -48,7 +48,8 @@ developmentStatus:
         - "Manufacturing scale-up"
         - "Market entry"
 pricingAndAvailability:
-  accessiblePricing:
+  tagline: "Accessible Pricing"
+  pricingDetails:
     product: "Dexios Hand"
     price: "LKR 1,000,000"
     advantages:
@@ -56,7 +57,7 @@ pricingAndAvailability:
       - "Local manufacturing and support"
       - "Comprehensive warranty and service package"
       - "Payment plans available"
-  compareWithAlternatives:
+  alternativeComparison:
     - name: "International Brands"
       price: "LKR 5-7M"
     - name: "Basic Alternatives"
