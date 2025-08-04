@@ -14,7 +14,6 @@ export function parseMarkdownContent(content: string): any {
 export function readMarkdownFile(filename: string): ParsedContent {
   try {
     const filePath = path.join(process.cwd(), "content", filename)
-    console.log(filePath);
     const content = fs.readFileSync(filePath, "utf8")
     return parseMarkdownContent(content)
   } catch (error) {
