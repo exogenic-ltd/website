@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Mail, Github, Linkedin } from "lucide-react"
+import { Calendar, MapPin, Mail, Github, Linkedin, ClipboardList, Users, PhoneCall, GraduationCap } from "lucide-react"
 import { readMarkdownFile } from "@/lib/markdown-parser"
 
 export default function About() {
@@ -11,7 +11,7 @@ export default function About() {
       "Tailwind CSS",
       "HTML5 & CSS3",
     ],
-    backend: aboutContent.skills?.backend|| ["Node.js", "Express.js", "PostgreSQL", "MongoDB"],
+    backend: aboutContent.skills?.backend || ["Node.js", "Express.js", "PostgreSQL", "MongoDB"],
     tools: aboutContent.skills?.tools || ["Git & GitHub", "Docker", "AWS", "Vercel"],
   }
 
@@ -85,36 +85,58 @@ export default function About() {
           </div>
         </div>
 
-        {/* Skills Section */}
-        <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
-          <h2 className="text-2xl font-bold text-white mb-6">Skills & Technologies</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">Frontend</h3>
-              <ul className="space-y-2 text-gray-300">
-                {skills.frontend.map((skill : string, index: string) => (
-                  <li key={index}>{skill}</li>
-                ))}
-              </ul>
+        {aboutContent.team &&
+          <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
+            <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+              Our Team
+            </h3>
+            <h4 className="text-2xl font-bold text-blue-400 mb-6 flex items-center">
+              <Users className="h-6 w-6 text-blue-400 mr-3" />
+              Members
+            </h4>
+            <div className="space-y-4">
+              {aboutContent.team.members?.map((member: any) => (
+                <div key={member.id} className="border-l-2 grid gap-6 border-blue-500/30 pl-4">
+                  <div className="text-lg font-semibold text-white">{member.name}</div>
+                  {member.email && <><Mail /> <div className="text-gray-300">{member.email}</div></>}
+                  {member.contactNo &&<><PhoneCall /> <div className="text-blue-400">{member.contactNo}</div></>}
+                  <div className="text-sm text-gray-400">{member.description}</div>
+                </div>
+              ))}
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">Backend</h3>
-              <ul className="space-y-2 text-gray-300">
-                {skills.backend.map((skill : string, index: string) => (
-                  <li key={index}>{skill}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">Tools</h3>
-              <ul className="space-y-2 text-gray-300">
-                {skills.tools.map((skill : string, index: string) => (
-                  <li key={index}>{skill}</li>
-                ))}
-              </ul>
+            <h4 className="text-2xl font-bold text-blue-400 mb-6 flex items-center">
+              <GraduationCap className="h-6 w-6 text-blue-400 mr-3" />
+              AdvisoryBoard
+            </h4>
+            <div className="space-y-4">
+              {aboutContent.team.advisoryBoard?.map((member: any) => (
+                <div key={member.id} className="border-l-2 grid gap-6 border-blue-500/30 pl-4">
+                  <div className="text-lg font-semibold text-white">{member.name}</div>
+                  {member.email && <><Mail /> <div className="text-gray-300">{member.email}</div></>}
+                  {member.contactNo &&<><PhoneCall /> <div className="text-blue-400">{member.contactNo}</div></>}
+                  <div className="text-sm text-gray-400">{member.description}</div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        }
+
+        {aboutContent.partners && (
+          <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20 mb-12">
+            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
+              <ClipboardList className="h-8 w-8 text-blue-400 mr-4" />
+              Partnerships
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {aboutContent.partners?.map((partner: any) => (
+                <div key={partner.id} className="bg-gray-700/30 p-6 rounded-lg border border-blue-500/10">
+                  <h4 className="text-xl font-semibold text-white mb-2">{partner.name}</h4>
+                  <p className="text-gray-300">{partner.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

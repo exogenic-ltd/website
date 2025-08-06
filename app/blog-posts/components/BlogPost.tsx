@@ -159,14 +159,14 @@ export default function BlogPost(slug: any) {
             }
 
             if (componentData.paragraph) {
-              outputBlock.push(<ParagraphComponent key={componentData.blockId} content={componentData.paragraph} />);
+              outputBlock.push(<ParagraphComponent key={componentData.blockId+10} content={componentData.paragraph} />);
             }
 
             if (componentData.bulletExplainerWithTitle) {
               // Bullet explainer with title and descriptions
               const explainer = componentData.bulletExplainerWithTitle;
               outputBlock.push(<BulletExplainerWithTitle
-                key={componentData.blockId}
+                key={componentData.blockId + 20}
                 title={explainer.title}
                 bulletPointsWithDesc={explainer.bulletPointsWithDesc}
               />);
@@ -174,19 +174,19 @@ export default function BlogPost(slug: any) {
 
             if (componentData.sections) {
               outputBlock.push(
-                <SectionsComponent sections={componentData.sections} />
+                <SectionsComponent key={componentData.blockId + 30} sections={componentData.sections} />
               )
             }
 
             if (componentData.bulletPoints) {
               outputBlock.push(<BulletPointsComponent
-                key={item.blockId}
+                key={componentData.blockId + 40}
                 bulletPoints={componentData.bulletPoints}
               />)
             }
 
             if(componentData.bulletPointsWithDesc){
-              outputBlock.push(<DescriptiveBulletPointsComponent bulletPointsWithDesc={componentData.bulletPointsWithDesc}/>)
+              outputBlock.push(<DescriptiveBulletPointsComponent key={componentData.blockId+50} bulletPointsWithDesc={componentData.bulletPointsWithDesc}/>)
             }
 
             return outputBlock;
