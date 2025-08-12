@@ -96,37 +96,32 @@ export default function About() {
             </h4>
             <div className="space-y-4">
               {aboutContent.team.members?.map((member: any) => (
-                <div key={member.id} className="border-l-2 grid gap-6 border-blue-500/30 pl-4">
-                  <div className="text-lg font-semibold text-white">{member.name}</div>
-                  {member.email && <><Mail /> <div className="text-gray-300">{member.email}</div></>}
-                  {member.contactNo &&<><PhoneCall /> <div className="text-blue-400">{member.contactNo}</div></>}
-                  <div className="text-sm text-gray-400">{member.description}</div>
+                <div key={member.id} className="border-l-2 grid border-blue-500/30 pl-4">
+                  <div className="text-md text-white">{member.name}</div>
+                  <div className="text-sm text-gray-400 p-2">{member.description}</div>
+                  {member.email && <><div className="text-sm text-gray-300 flex p-2"><Mail className="text-sm" /><p className="pl-2">{member.email}</p></div></>}
+                  {member.contactNo && <><div className="text-sm text-blue-400 flex p-2"><PhoneCall className="text-sm" /><p className="pl-2">{member.contactNo}</p></div></>}
                 </div>
               ))}
             </div>
-            <h4 className="text-2xl font-bold text-blue-400 mb-6 flex items-center">
+            <h4 className="text-2xl pt-8 font-bold text-blue-400 mb-6 flex items-center">
               <GraduationCap className="h-6 w-6 text-blue-400 mr-3" />
               AdvisoryBoard
             </h4>
             <div className="space-y-4">
               {aboutContent.team.advisoryBoard?.map((member: any) => (
-                <div key={member.id} className="border-l-2 grid gap-6 border-blue-500/30 pl-4">
+                <div key={member.id} className="border-l-2 grid p-1 border-blue-500/30 pl-4">
                   <div className="text-lg font-semibold text-white">{member.name}</div>
-                  {member.email && <><Mail /> <div className="text-gray-300">{member.email}</div></>}
-                  {member.contactNo &&<><PhoneCall /> <div className="text-blue-400">{member.contactNo}</div></>}
+                  {member.email && <><div className="text-sm text-gray-300 flex p-2"><Mail className="text-sm" /><p className="pl-2">{member.email}</p></div></>}
+                  {member.contactNo && <><div className="text-sm text-blue-400 flex p-2"><PhoneCall className="text-sm" /><p className="pl-2">{member.contactNo}</p></div></>}
                   <div className="text-sm text-gray-400">{member.description}</div>
                 </div>
               ))}
             </div>
-          </div>
-        }
-
-        {aboutContent.partners && (
-          <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-              <ClipboardList className="h-8 w-8 text-blue-400 mr-4" />
+            <h4 className="text-2xl font-bold pt-8 text-blue-400 mb-8 flex items-center">
+              <ClipboardList className="h-6 w-6 text-blue-400 mr-4" />
               Partnerships
-            </h2>
+            </h4>
             <div className="grid md:grid-cols-2 gap-6">
               {aboutContent.partners?.map((partner: any) => (
                 <div key={partner.id} className="bg-gray-700/30 p-6 rounded-lg border border-blue-500/10">
@@ -136,7 +131,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        )}
+        }
       </div>
     </div>
   )
