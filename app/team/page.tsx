@@ -1,6 +1,8 @@
 import { ExternalLink, Calendar } from "lucide-react"
 import { readMarkdownFile } from "@/lib/markdown-parser"
 import ProfilePhoto from "../member/components/ProfilePhoto";
+import { constants } from "buffer";
+import Constants from "@/components/constants";
 export default function Team() {
     const teamsContent = readMarkdownFile("team.md");
 
@@ -9,9 +11,22 @@ export default function Team() {
         teamMemberData = [];
         if (teamsContent) {
             teamsContent.members.forEach((member: any) => {
+
                 try {
-                    if(member){
+                    if (member) {
                         let teamMemberDetails = readMarkdownFile(`/team-members/${member.name}.md`);
+
+                        switch (member.category) {
+                            case Constants.Founder:
+                                teamMemberDetails.category = Constants.Founder;
+                                break;
+                            case Constants.Advisor:
+                                teamMemberDetails.category = Constants.Advisor;
+                                break;
+                            default:
+                                teamMemberDetails.category = Constants.TeamMember;
+                        }
+
                         teamMemberData.push(teamMemberDetails);
                     }
                 } catch (e) {
@@ -27,7 +42,7 @@ export default function Team() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-            <div className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -39,13 +54,28 @@ export default function Team() {
                     </p>
                 </div>
 
-                {/* members Grid */}
-                <div className="grid lg:grid-cols-3 gap-8">
+                {/* founder Grid */}
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Founders</h3>
+                <div className="grid lg:grid-cols-4 gap-8">
                     {teamMembers?.map((member: any) => (
+                        member.category == Constants.Founder &&
                         <div key={member.id} className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group">
                             {/* member Image */}
-                            <div className="p-5">
-                                <ProfilePhoto src={member.profileImageUrl || "/placeholder.svg"} alt={member.title} size="xl" className="mb-6" />
+                            <div className="p-4">
+                                <ProfilePhoto src={member.profileImageUrl || "/placeholder.svg"} alt={member.title} size="lg" className="mb-6" />
+                            </div>
+
+                            {/* member Links */}
+                            <div className="flex item-center px-14">
+                                {member.firstName &&
+                                    <a
+                                        href={`/member?name=${member.firstName}`}
+                                        className="flex items-center px-12 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                    >
+                                        <ExternalLink className="h-4 w-4 mr-2" />
+                                        Profile
+                                    </a>
+                                }
                             </div>
 
                             {/* member Content */}
@@ -53,34 +83,83 @@ export default function Team() {
                                 <div className="flex items-center justify-between mb-3">
                                     <h3 className="text-xl font-bold text-white">{member.title}</h3>
                                 </div>
-                                {member.contact?.affiliation && 
+                                {member.contact?.affiliation &&
                                     <p className="text-gray-300 mb-4 line-clamp-3">{member.contact.affiliation}</p>
                                 }
-                            
-                                {/* Technologies */}
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {member.academicQualifications?.map((qualification: any) => (
-                                        <span
-                                            key={qualification.id}
-                                            className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-500/30"
-                                        >
-                                            {qualification.degree}
-                                        </span>
-                                    ))}
-                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
-                                {/* member Links */}
-                                <div className="flex space-x-4">
-                                    {member.firstName &&
-                                        <a
-                                            href={`/member?name=${member.firstName}`}
-                                            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                                        >
-                                            <ExternalLink className="h-4 w-4 mr-2" />
-                                            Profile
-                                        </a>
-                                    }
+                {/* member Grid */}
+                <h3 className="text-2xl sm:text-3xl font-bold py-6 text-white" >Team</h3>
+                <div className="grid lg:grid-cols-4 gap-8">
+                    {teamMembers.map((member: any) => (
+                        member.category == Constants.TeamMember &&
+                        <div key={member.id} className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group">
+                            {/* member Image */}
+                            <div className="p-4">
+                                <ProfilePhoto src={member.profileImageUrl || "/placeholder.svg"} alt={member.title} size="lg" className="mb-6" />
+                            </div>
+
+                            {/* member Links */}
+                            <div className="flex item-center px-14">
+                                {member.firstName &&
+                                    <a
+                                        href={`/member?name=${member.firstName}`}
+                                        className="flex items-center px-12 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                    >
+                                        <ExternalLink className="h-4 w-4 mr-2" />
+                                        Profile
+                                    </a>
+                                }
+                            </div>
+
+                            {/* member Content */}
+                            <div className="p-6">
+                                <div className="flex items-center justify-between mb-3">
+                                    <h3 className="text-xl font-bold text-white">{member.title}</h3>
                                 </div>
+                                {member.contact?.affiliation &&
+                                    <p className="text-gray-300 mb-4 line-clamp-3">{member.contact.affiliation}</p>
+                                }
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* advisor Grid */}
+                <h3 className="text-2xl sm:text-3xl font-bold py-6 text-white">Advisors</h3>
+                <div className="grid lg:grid-cols-4 gap-8">
+                    {teamMembers?.map((member: any) => (
+                        member.category == Constants.Advisor &&
+                        <div key={member.id} className="bg-gray-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 overflow-hidden group">
+                            {/* member Image */}
+                            <div className="p-4">
+                                <ProfilePhoto src={member.profileImageUrl || "/placeholder.svg"} alt={member.title} size="lg" className="mb-6" />
+                            </div>
+
+                            {/* member Links */}
+                            <div className="flex item-center px-14">
+                                {member.firstName &&
+                                    <a
+                                        href={`/member?name=${member.firstName}`}
+                                        className="flex items-center px-12 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                    >
+                                        <ExternalLink className="h-4 w-4 mr-2" />
+                                        Profile
+                                    </a>
+                                }
+                            </div>
+
+                            {/* member Content */}
+                            <div className="p-6">
+                                <div className="flex items-center justify-between mb-3">
+                                    <h3 className="text-xl font-bold text-white">{member.title}</h3>
+                                </div>
+                                {member.contact?.affiliation &&
+                                    <p className="text-gray-300 mb-4 line-clamp-3">{member.contact.affiliation}</p>
+                                }
                             </div>
                         </div>
                     ))}

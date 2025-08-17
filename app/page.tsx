@@ -7,6 +7,7 @@ export default function Home() {
   const homeContent = readMarkdownFile("home.md")
   const carouselSlides = readMarkdownFile("carousel.md")
 
+  console.log(homeContent);
   // Fallback content
   const headerContent = homeContent.header || {}
   const featuresContent = homeContent.features_section || {}
@@ -48,17 +49,15 @@ export default function Home() {
       <section className="px-4 py-16 sm:px-6 lg:px-8 mt-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            {featuresContent.title || "What I Bring to the Table"}
+            {homeContent.features_title || "What We Bring to the Table"}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon
+            {homeContent.features.map((feature:any) => {
               return (
                 <div
-                  key={index}
+                  key={feature.id}
                   className="bg-gray-800/50 p-6 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-colors"
                 >
-                  <IconComponent className="h-12 w-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
