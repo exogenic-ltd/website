@@ -7,34 +7,10 @@ export default function Home() {
   const homeContent = readMarkdownFile("home.md")
   const carouselSlides = readMarkdownFile("carousel.md")
 
-  console.log(homeContent);
   // Fallback content
   const headerContent = homeContent.header || {}
   const featuresContent = homeContent.features_section || {}
   const ctaContent = homeContent.cta_section || {}
-  const features = [
-    {
-      icon: Code,
-      title: featuresContent.feature_1_title || "Clean Code",
-      description:
-        featuresContent.feature_1_description ||
-        "Writing maintainable, scalable, and efficient code that stands the test of time.",
-    },
-    {
-      icon: Palette,
-      title: featuresContent.feature_2_title || "Design Focus",
-      description:
-        featuresContent.feature_2_description ||
-        "Creating beautiful, intuitive interfaces that provide exceptional user experiences.",
-    },
-    {
-      icon: Zap,
-      title: featuresContent.feature_3_title || "Performance",
-      description:
-        featuresContent.feature_3_description ||
-        "Optimizing applications for speed, accessibility, and seamless user interactions.",
-    },
-  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
