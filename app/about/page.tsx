@@ -75,7 +75,7 @@ export default function About() {
                   <Github className="h-6 w-6" />
                 </a> */}
                 <a
-                  href={aboutContent.social_links?.linkedin || "#"}
+                  href={aboutContent.socialLinks?.linkedin || "#"}
                   className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <Linkedin className="h-6 w-6" />

@@ -7,7 +7,7 @@ content: ExoGenic (Pvt) Ltd is a pioneering MedTech startup focused on developin
 contactInfo:
   email: "info.exogenic@gmail.com"
 socialLinks:
-  linkedin: "linkedin.com/company/exogenic/"
+  linkedin: "https://www.linkedin.com/company/exogenic/"
 team:
   members:
   - id: 01

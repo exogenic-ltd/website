@@ -21,6 +21,8 @@ members:
   - id: 6
     name: "vimukthi"
     category: "team"
+  - id: 7
+    name: "niseni"
 
 ctaSection:
   title: "Interested in Working Together?"
