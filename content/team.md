@@ -23,10 +23,11 @@ members:
     category: "team"
   - id: 7
     name: "niseni"
+    category: "team"
 
 ctaSection:
   title: "Interested in Working Together?"
-  description: "I'm always open to discussing new opportunities and interesting projects."
+  description: "We're always open to discussing new collaboration & partnerships."
   buttonText: "Get in Touch"
   buttonLink: "/about"
 ---

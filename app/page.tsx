@@ -10,7 +10,7 @@ export default function Home() {
   // Fallback content
   const headerContent = homeContent.header || {}
   const featuresContent = homeContent.features_section || {}
-  const ctaContent = homeContent.cta_section || {}
+  const ctaContent = homeContent.ctaSection || {}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">

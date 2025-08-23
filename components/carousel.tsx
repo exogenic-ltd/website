@@ -85,7 +85,7 @@ export default function Carousel({ slides }: ParsedContent) {
                 </h2>
                 <p className="text-xl text-gray-200 mb-8 leading-relaxed">{slide.description}</p>
                 <a
-                  href={slide.cta}
+                  href={slide.ctaLink}
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors transform hover:scale-105"
                 >
                   {slide.ctaText}
