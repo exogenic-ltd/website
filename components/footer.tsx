@@ -1,29 +1,6 @@
 "use client"
 
-import Link from "next/link"
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, ArrowUp } from "lucide-react"
-
-const navigation = {
-  main: [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Blog", href: "/blog" },
-    { name: "Profile", href: "/profile" },
-  ],
-  resources: [
-    { name: "Documentation", href: "#" },
-    { name: "Tutorials", href: "#" },
-    { name: "API Reference", href: "#" },
-    { name: "Support", href: "#" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "Disclaimer", href: "#" },
-  ],
-}
+import { Linkedin, ArrowUp } from "lucide-react"
 
 const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/exogenic", icon: Linkedin },
