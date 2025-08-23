@@ -2,7 +2,7 @@
 id: 5
 title: "Dr. Pubudu Ranaweera"
 firstName: "pubudu"
-profileImageUrl: "team-member/default.jpg"
+profileImageUrl: "team-member/pubudu.jpg"
 draft: false
 weight: 80
 fullName: "R.K. Pubudu Sampath Ranaweera"

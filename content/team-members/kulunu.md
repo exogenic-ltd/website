@@ -1,7 +1,7 @@
 ---
 id: 3
 firstName: "kulunu"
-profileImageUrl: "team-member/default.jpg"
+profileImageUrl: "team-member/kulunu.jpg"
 title: "Mr. Kulunu Weerasoory"
 draft: false
 weight: 30

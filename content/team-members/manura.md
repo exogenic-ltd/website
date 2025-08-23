@@ -2,7 +2,7 @@
 id: 4
 title: "Mr. Manura De Silva"
 firstName: "manura"
-profileImageUrl: "team-member/default.jpg"
+profileImageUrl: "team-member/manura.jpg"
 draft: false
 weight: 20
 fullName: "Manura Jithmal De Silva"
