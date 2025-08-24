@@ -10,10 +10,10 @@ members:
     name: "pubudu"
     category: "advisor"
   - id: 3
-    name: "manura"
+    name: "harindu"
     category: "founder"
   - id: 4
-    name: "harindu"
+    name: "manura"
     category: "founder"
   - id: 5
     name: "kulunu"
