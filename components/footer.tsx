@@ -1,9 +1,11 @@
 "use client"
 
-import { Linkedin, ArrowUp } from "lucide-react"
+import { Linkedin, Facebook, Instagram, ArrowUp } from "lucide-react"
 
 const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/exogenic", icon: Linkedin },
+  { name: "Facebook", href: "https://www.facebook.com/share/15QLLKgf41/", icon: Facebook },
+  { name: "Instagram", href: "https://www.instagram.com/exogenic", icon: Instagram }
 ]
 
 export default function Footer() {

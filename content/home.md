@@ -1,17 +1,17 @@
 ---
-features_title: "What We Bring to the Table"
+features_title: "Driving Innovation, Delivering Impact"
 features:
  - id: 000
-   title: "Innovation"
-   description: "Where technology and health converge"
+   title: "Vision"
+   description: "To become Sri Lanka's first ever state-of-the-art bionics development group, translating the research into real world products and devices."
  - id: 001
-   title: "Accessibility"
-   description: "Accessible technology for a healthier world"
+   title: "Mission"
+   description: "Utilizing the engineering and scientific prowess of the strong and enthusiastic team to generate maximum value and customer satisfaction with a unique human touch."
  - id: 002
-   title: "Affordablility"
-   description: "Making advanced healthcare attainable"
+   title: "Values"
+   description: "We are guided by innovation with purpose, accessibility for all, integrity in our work, collaboration with our partners, and a commitment to excellence in everything we create."
 ctaSection:
-  title: "Intrested in Our Products?"
+  title: "Who are We?"
   description: "Check out our blog for the latest news & updates."
   button: "Read Blog"
 ---

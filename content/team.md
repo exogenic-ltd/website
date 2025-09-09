@@ -24,6 +24,9 @@ members:
   - id: 7
     name: "niseni"
     category: "team"
+  - id: 8
+    name: "chulanga"
+    category: "team"
 
 ctaSection:
   title: "Interested in Working Together?"
