@@ -1,11 +1,12 @@
 "use client"
 
-import { Linkedin, Facebook, Instagram, ArrowUp } from "lucide-react"
+import { Linkedin, Facebook, MessageCircle, Instagram, ArrowUp } from "lucide-react"
 
 const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/exogenic", icon: Linkedin },
   { name: "Facebook", href: "https://www.facebook.com/share/15QLLKgf41/", icon: Facebook },
-  { name: "Instagram", href: "https://www.instagram.com/exogenic", icon: Instagram }
+  { name: "WhatsApp", href: "https://wa.me/message/XDKMCL44MGSEK1", icon: MessageCircle },
+  { name: "Instagram", href: "https://www.instagram.com/exogenic_group?utm_source=qr&igsh=NmFwNXZpZnZwbDRw", icon: Instagram },
 ]
 
 export default function Footer() {

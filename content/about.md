@@ -8,6 +8,9 @@ contactInfo:
   email: "info.exogenic@gmail.com"
 socialLinks:
   linkedin: "https://www.linkedin.com/company/exogenic/"
+  facebook: "https://www.facebook.com/share/15QLLKgf41/"
+  whatsapp: "https://wa.me/message/XDKMCL44MGSEK1"
+  instagram: "https://www.instagram.com/exogenic_group?utm_source=qr&igsh=NmFwNXZpZnZwbDRw"
 team:
   members:
   - id: 01
