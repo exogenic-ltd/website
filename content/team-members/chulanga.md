@@ -1,17 +1,17 @@
 ---
 id: 2
-firstName: "vimukthi"
-profileImageUrl: "team-member/vimukthi.jpg"
-title: "Mr. Vimukthi Sooriyage"
+firstName: "chulanga"
+profileImageUrl: "team-member/chulanga.jpg"
+title: "Mr. Chulanga Malalagama"
 draft: false
 weight: 10
-fullName: "Vidura Vimukthi Vishwanath Sooriyage"
+fullName: "Chulanga Induwara Malalagama"
 contact:
   affiliation: "Product Manager"
-  email: "viduravimukthi7@gmail.com"
+  email: "chulangainduwara@gmail.com"
   links:
     - name: "LinkedIn"
-      url: "linkedin.com/in/vidura-vimukthi-vishwanath-sooriyage-389714344"
+      url: "linkedin.com/in/chulanga-malalagama-422081270"
 
 academicQualifications:
   - id: 1
@@ -21,32 +21,21 @@ academicQualifications:
     details:
       research: "Development of a robot for pre-hospital treatments of traumatic bleeding wounds"
       majorCoursework: ["Robotics", "Biomedical Engineering", "Control Systems"]
-      extraCurricular: ["Member - Instituion of Engineering, Sri Lanka", "Student Affiliate Member - Institution of Mechanical Engineers", "Member - Students for Exploration and Development of Space (SEDS), University of Moratuwa"]
-     
+      extraCurricular: ["Director of Operations and Current Affiars - IESL"]
   - id: 3
-    degree: "G.C.E. O/L"
-    institution: "President's College, Homagama"
-    years: "2005–2015"
+    degree: "G.C.E. O/L and G.C.E. A/L"
+    institution: "Rahula College, Matara"
+    years: "2005–2019"
     details:
-      - \[1^st]" place - Mathematics Quiz Competition (2014)"
-      - \[1^st]" place - Mathematics Quiz Competition (2015)"
-
-  - id: 4
-    degree: "G.C.E. A/L"
-    institution: "Nalanda College, Colombo 10"
-    years: "2016–2018"
-    details:
-      - "Merit Pass - National Statistics Olympiad (2018)"
-  - id: 5
-    degree: "Certificate Course in Hindi Language"
-    institution: "National Institute of Language Education and Training - Ministry of Public Service, Provincial Councils and Local Government"
-    years: "2019–2020"
-    details:
-      - "Merit Pass"
-
+      member: ["School Prefect (2014-2017)", "Secretary - Buddhist Society", "Chess Club - District level Winner"]
 careerProgression:
+  - role: "Visiting Instructor"
+    institution: "University of Moratuwa, Katubedda"
+    year: "2025"
+    faculty: "Faculty of Engineering"
+    subjects: ["Operational Amplifiers"]
   - role: "Mechanical Engineer (Intern)"
-    institution: "Sri Lanka Ports Authority (SLPA)"
+    institution: "Brandix - Automation Unit, Ekala and Katunayake"
     year: "2023/2024"
     details:
       - "Developed C#-based applications for database management and HMI systems."
@@ -64,24 +53,24 @@ projectsAndResearch:
       - "Prototype fabrication and testing"
       - "Control implementation in C++ and Python"
   - title: "Industrial Optimization Project"
-    institution: "Indu Fashions"
+    institution: "Freelan Enterprises (Pvt) Ltd, Matara"
     year: "2023"
     details:
       - "Field visits, data collection"
       - "Optimization and process simulations"
-  - title: "Design of a MEMS-based Dual-functionality Piezoelectric Array for Force Mearsurement and Energy Harvesting"
+  - title: "Design and Development of a Piezoelectric Self-adaptive Microvalve"
     institution: "Dept. of Mechanical Engineering, UoM"
     year: "2024"
     details:
-      - "Micro and Nano scale desgin and fabrication"
+      - "Design of a micro valve"
       - "Analysis using COMSOL Multiphysics"
-  - title: "Design of a Gearbox for Manually Operated Sheet Rolling Machine"
+  - title: "Design of a Customize Gearbox for a tow-truck"
     institution: "Dept. of Mechanical Engineering, UoM"
     year: "2022"
     details:
       - "3D modelling of gearbox"
       - "Parametric calculations"
-  - title: "Reverse Engineering of a Antique Wall Clock"
+  - title: "Reverse Engineering a Conventional High-mount Winch"
     institution: "Dept. of Mechanical Engineering, UoM"
     year: "2023"
     details:
@@ -92,10 +81,10 @@ projectsAndResearch:
     instituion: "Dept. of Mechanical Engineering"
     year: "2024"
     details:
-      - "Arduino Programming"
+      - "ESP32 Programming"
       - "Line following"
       - "Obstacle avoidance"
-      - "Remmote controlling through Wi-Fi"
+      - "Remmote controlling"
       - "Mobile app development"
   - title: " Providing Solutions to Uplift Woodcarving Industry in Sri Lanka - Social and Community Project"
     instituion: "Dept. of Mechanical Engineering"
@@ -107,9 +96,8 @@ projectsAndResearch:
 skillsAndCertifications:
   languages: ["C++", "C#", "Python", "MATLAB"]
   research: ["Rapid Literature Review", "Knowledge Management"]
-  designAndSimulation: ["3D Modelling", "Mechanical Design", "Finite Element Analysis", "Control Systems", "Optimization", "Advanced Operational Research", "Manufacturing Processes"]
+  designAndSimulation: ["3D Modelling", "Mechanical Design", "Finite Element Analysis", "Control Systems"]
   analysisTools: ["COMSOL", "Ansys", "MATLAB/Simulink"]
   writing: ["Research papers", "Technical Reports"]
-  Languages: ["Sinhala (Native)", "English (Fluent)", "Hindi (Basic Conversational Level)", "Chinese (Basic Conversational Level)"]
-  softSkills: ["Creativity", "Teamwork", "Critical Thinking", "Organization Skills"]
+  Languages: ["Sinhala (Native)", "English (Fluent)"]
 # This section can be left empty as all structured content is now in the front matter.

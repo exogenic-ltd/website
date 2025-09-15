@@ -25,7 +25,7 @@ export default function Home() {
       <section className="px-4 py-16 sm:px-6 lg:px-8 mt-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            {homeContent.features_title || "What We Bring to the Table"}
+            {homeContent.features_title || "Driving Innovation, Delivering Impact"}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {homeContent.features.map((feature:any) => {

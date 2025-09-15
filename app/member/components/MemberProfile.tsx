@@ -126,6 +126,7 @@ export default function MemberProfile(profileName: any) {
                       <div className="text-lg font-semibold text-white">{qual.degree}</div>
                       <div className="text-blue-400">{qual.field}</div>
                       <div className="text-gray-300">{qual.university}</div>
+                      <div className="text-blue-400">{qual.institution}</div>
                       <div className="text-sm text-gray-400">{qual.years}</div>
                       {qual.level && <div className="text-sm text-gray-400">{qual.level}</div>}
                     </div>

@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Mail, Github, Linkedin, ClipboardList, Users, PhoneCall, GraduationCap } from "lucide-react"
+import { Calendar, MapPin, Mail, Github, Linkedin, Facebook, MessageCircle, Instagram, ClipboardList, Users, PhoneCall, GraduationCap } from "lucide-react"
 import { readMarkdownFile } from "@/lib/markdown-parser"
 
 export default function About() {
@@ -79,6 +79,24 @@ export default function About() {
                   className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <Linkedin className="h-6 w-6" />
+                </a>
+                <a
+                  href={aboutContent.socialLinks?.facebook || "#"}
+                  className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a
+                  href={aboutContent.socialLinks?.whatsapp || "#"}
+                  className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <MessageCircle className="h-6 w-6" />
+                </a>
+                <a
+                  href={aboutContent.socialLinks?.instagram || "#"}
+                  className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <Instagram className="h-6 w-6" />
                 </a>
               </div>
             </div>
