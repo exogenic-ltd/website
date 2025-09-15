@@ -11,8 +11,9 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Team", href: "/team" },
   { name: "Projects", href: "/projects" },
+  { name: "Events", href: "/events" },
   { name: "Blog", href: "/blog" },
-]
+ ]
 
 export default function Navbar() {
   const pathname = usePathname()

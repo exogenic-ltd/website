@@ -7,7 +7,7 @@ draft: false
 weight: 10
 fullName: "Harindu Dulanjaya Bandara"
 contact:
-  affiliation: "Assistant Lecturer, University of of Moratuwa, Sri Lanka"
+  affiliation: "Founder and CEO"
   email: "harindudb@gmail.com"
   links:
     - name: "LinkedIn"
