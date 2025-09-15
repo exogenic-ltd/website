@@ -141,21 +141,26 @@ projectsAndResearch:
       - "Systems integration & testing"
 
 skillsAndCertifications:
-  languages: ["C++", "Python", "MATLAB", "JavaScript"]
+  CADand#DModelling: ["AutoCAD", "Fusion 360", "SolidWorks", "Solid Edge", "Siemens NX"]
+  languages: ["C++", "Python", "MATLAB"]
+  microcontrollertools: ["Arduino", "STEP7-MicroWin", "RaspberyPi"]
   communication: ["Sinhala (Native)", "English (Fluent)"]
   research: ["Rapid Literature Review", "Knowledge Management"]
   designAndSimulation: ["3D Modelling", "Mechanical Design", "Finite Element Analysis", "Control Systems", "Optimization"]
   analysisTools: ["COMSOL", "MATLAB/Simulink"]
   writing: ["Research papers", "Technical Reports"]
-scholarshipsAndAwards:
-  - name: "University Scholarship Scheme"
-    institution: "Ceylon Petroleum Storage Terminals Ltd."
-    years: "2021–2024"
-  - name: "Academic Performance Award"
-    institution: "Ananda College"
-    years: "2019"
-  - name: "Best in Mathematics and English"
-    institution: "Vidura College"
-    years: "2015"
+CompetitionsandAwards:
+  - name: "Data Storm"
+    institution: "3rd place - “Data Storm” competition held by John Keells with Rotaract club of UoM."
+    years: "2022"
+  - name: "Start-Up Spark"
+    institution: "Finalists - Startup Spark 2024 competition, organized by IESL"
+    years: "2024"
+  - name: "Innovation Nation Sri Lanka"
+    institution: "Finalist -  INSL, organized by IEEE"
+    years: "2022"
+  - name: "Dialog Innovation Challenge"
+    institution: "Got selected from the first round"
+    years: "2024"
 ---
 # This section can be left empty as all structured content is now in the front matter.

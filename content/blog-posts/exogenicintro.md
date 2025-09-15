@@ -1,10 +1,10 @@
 ---
-title: "What is EXOGENIC (Pvt) Ltd"
+title: "Introducing ExoGenic: Shaping the Future of Med-Tech"
 overview:
-  - introduction: "One of the most remarkable aspects of the Dexios Hand is its myoelectric control system – technology that translates your muscle signals into prosthetic movement. But how does this seemingly magical process actually work? Let’s dive into the science behind natural prosthetic control."
+  - introduction: "Healthcare is evolving faster than ever. From robotic surgery to AI-powered diagnostics. Technology is transforming how we approach medicine. Yet, despite these breakthroughs , millions of people worldwide still face barriers to quality care, whether due to high costs, lack of accessibility, or the slow pace of adoption."
 content:
   - blockId: 1
-    paragraph: "Every time you think about moving your hand, your brain sends electrical signals through your nervous system to your    muscles. Even when muscles are no longer connected to a limb, these electrical signals – called myoelectric signals – can still be detected and interpreted."
+    paragraph: "At ExoGenic, we believe that innovation must bridge this gap. We do not just innovate , we commercialize. Too often, promising research projects remain confined to labs. Our mission is to bring the academic researches into market, ensuring breakthroughs translate into accessible medical technologies. We design and deliver innovative medical technologies that are not only cutting-edge, but also accessible and impactful."
   - blockId: 2
     bulletExplainerWithTitle:
       title: "The Detection Process"
