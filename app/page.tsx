@@ -54,7 +54,7 @@ export default function Home() {
             href={ctaContent.button?.split(" | ")[1] || "/blog"}
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105"
           >
-            {ctaContent.button?.split(" | ")[0] || "Read My Blog"}
+            {ctaContent.button?.split(" | ")[0] || "Read Blog"}
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

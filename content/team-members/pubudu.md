@@ -7,7 +7,11 @@ draft: false
 weight: 80
 fullName: "R.K. Pubudu Sampath Ranaweera"
 contact:
-  affiliation: "Senior Lecturer, University of Moratuwa, Sri Lanka"
+  affiliation: 
+    - "Senior Lecturer"
+    - "Department of Mechanical Engineering"
+    - "University of Moratuwa"
+    - "Sri Lanka"
   email: "pubudur@uom.lk"
   links:
     - name: "GoogleScholar"

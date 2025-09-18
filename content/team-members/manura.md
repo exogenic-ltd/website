@@ -7,7 +7,7 @@ draft: false
 weight: 20
 fullName: "Manura Jithmal De Silva"
 contact:
-  affiliation: "Lecturer, University of of Moratuwa, Sri Lanka"
+  affiliation: "Co-founder and COO"
   email: "manurajithmal@gmail.com"
   links:
     - name: "LinkedIn"

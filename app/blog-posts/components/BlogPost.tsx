@@ -144,9 +144,18 @@ export default function BlogPost(slug: any) {
           <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4 rounded-lg">
             {blogContent.title}
           </h1>
-          <p className="text-lg md:text-xl text-white italic">
+
+          <div className="text-lg md:text-xl text-white italic space-y-4">
+            {Array.isArray(blogContent.overview[0].introduction)
+              ? blogContent.overview[0].introduction.map((para: string, i: number) => (
+                <p key={i}>{para}</p>
+                  ))
+              : <p>{blogContent.overview[0].introduction}</p>}
+          </div>
+
+          {/*<p className="text-lg md:text-xl text-white italic">
             {blogContent.overview[0].introduction}
-          </p>
+          </p>*/}
         </header>
 
         {/* Content Section */}

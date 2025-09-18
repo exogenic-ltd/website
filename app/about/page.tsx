@@ -1,6 +1,7 @@
 import { Calendar, MapPin, Mail, Github, Linkedin, Facebook, MessageCircle, Instagram, ClipboardList, Users, PhoneCall, GraduationCap } from "lucide-react"
 import { readMarkdownFile } from "@/lib/markdown-parser"
 
+
 export default function About() {
   const aboutContent = readMarkdownFile("about.md")
 
@@ -23,10 +24,24 @@ export default function About() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             {aboutContent.header?.title || "About"}
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto text-center">
+            {Array.isArray(aboutContent.header?.subtitle)
+              ? aboutContent.header.subtitle.map((line: string, i: number) => (
+                <span key={i}>
+                  {line}
+                  <br />
+                  </span>
+                ))
+              : aboutContent.header?.subtitle ||
+                "Passionate developer with a love for creating innovative solutions and beautiful user experiences."}
+          </p>
+
+         
+          {/*<p className="text-xl text-gray-300 max-w-2xl mx-auto">
             {aboutContent.header?.subtitle ||
               "Passionate developer with a love for creating innovative solutions and beautiful user experiences."}
-          </p>
+          </p> */}
         </div>
 
         {/* Profile Section */}
@@ -106,13 +121,14 @@ export default function About() {
         {aboutContent.team &&
           <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-              Our Team
+              Our Network
             </h3>
             <h4 className="text-2xl font-bold text-blue-400 mb-6 flex items-center">
               <Users className="h-6 w-6 text-blue-400 mr-3" />
               Members
             </h4>
             <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-6">
               {aboutContent.team.members?.map((member: any) => (
                 <div key={member.id} className="border-l-2 grid border-blue-500/30 pl-4">
                   <div className="text-md text-white">{member.name}</div>
@@ -122,10 +138,6 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <h4 className="text-2xl pt-8 font-bold text-blue-400 mb-6 flex items-center">
-              <GraduationCap className="h-6 w-6 text-blue-400 mr-3" />
-              AdvisoryBoard
-            </h4>
             <div className="space-y-4">
               {aboutContent.team.advisoryBoard?.map((member: any) => (
                 <div key={member.id} className="border-l-2 grid p-1 border-blue-500/30 pl-4">
@@ -135,6 +147,7 @@ export default function About() {
                   <div className="text-sm text-gray-400">{member.description}</div>
                 </div>
               ))}
+            </div>
             </div>
             <h4 className="text-2xl font-bold pt-8 text-blue-400 mb-8 flex items-center">
               <ClipboardList className="h-6 w-6 text-blue-400 mr-4" />

@@ -1,13 +1,13 @@
 ---
-id: 2
+id: 8
 firstName: "vimukthi"
 profileImageUrl: "team-member/vimukthi.jpg"
 title: "Mr. Vimukthi Sooriyage"
 draft: false
-weight: 10
+weight: 50
 fullName: "Vidura Vimukthi Vishwanath Sooriyage"
 contact:
-  affiliation: "Product Manager"
+  affiliation: "Design Engineer"
   email: "viduravimukthi7@gmail.com"
   links:
     - name: "LinkedIn"
@@ -16,7 +16,7 @@ contact:
 academicQualifications:
   - id: 1
     degree: "Bsc.Hons Mechanical Engineering"
-    institution: "University of Moratuwa, Katubedda"
+    institution: "University of Moratuwa, Sri Lanka"
     years: "2021 – 2025"
     details:
       research: "Development of a robot for pre-hospital treatments of traumatic bleeding wounds"
@@ -59,50 +59,76 @@ projectsAndResearch:
     institution: "Bionics Lab, University of Moratuwa"
     years: "2023–2024"
     details:
-      - "Background research and technical analysis"
-      - "Detailed design, simulation and modeling"
-      - "Prototype fabrication and testing"
-      - "Control implementation in C++ and Python"
+      - "Medical robotics design"
+      - "CAD modeling & finite element simulations"
+      - "Prototyping & fabrication"
+      - "Control systems development"
+      - "Testing for medical safety & reliability"
   - title: "Industrial Optimization Project"
     institution: "Indu Fashions"
     year: "2023"
     details:
-      - "Field visits, data collection"
-      - "Optimization and process simulations"
-  - title: "Design of a MEMS-based Dual-functionality Piezoelectric Array for Force Mearsurement and Energy Harvesting"
+      - "Workflow analysis & bottleneck identification"
+      - "Process optimization"
+      - "Operations management principles"
+      - "Resource efficiency improvement"
+  - title: "Design of a Dual-functionality Piezoelectric Array for Force Measurement & Energy Harvesting"
     institution: "Dept. of Mechanical Engineering, UoM"
     year: "2024"
     details:
-      - "Micro and Nano scale desgin and fabrication"
-      - "Analysis using COMSOL Multiphysics"
+      - "MEMS device design"
+      - "CAD & simulation (COMSOL)"
+      - "Energy harvesting systems"
+      - "Piezoelectric sensing technology"
   - title: "Design of a Gearbox for Manually Operated Sheet Rolling Machine"
     institution: "Dept. of Mechanical Engineering, UoM"
     year: "2022"
     details:
-      - "3D modelling of gearbox"
-      - "Parametric calculations"
+      - "Gear design & torque transmission analysis"
+      - "Shaft, bearings & key design"
+      - "CAD assembly modeling"
+      - "Mechanical system optimization"
   - title: "Reverse Engineering of a Antique Wall Clock"
     institution: "Dept. of Mechanical Engineering, UoM"
     year: "2023"
     details:
-      - "Reverse engineering"
-      - "CAD modelling"
-      - "Mechanical simulations"
+      - "Reverse engineering & disassembly analysis"
+      - "CAD modeling of components"
+      - "Manufacturing process identification"
+      - "Functional and material analysis"
+  - title: "Smart Entrance System for University"
+    instituion: "Dept. of Mechanical Engineering"
+    year: "2022"
+    details: 
+      - "Sensor integration & automation"
+      - "Control systems (basic mechatronics)"
+      - "Embedded system prototyping"
+      - "User-centered design"
   - title: "Development of a Robotic Car"
     instituion: "Dept. of Mechanical Engineering"
     year: "2024"
     details:
-      - "Arduino Programming"
-      - "Line following"
-      - "Obstacle avoidance"
-      - "Remmote controlling through Wi-Fi"
-      - "Mobile app development"
-  - title: " Providing Solutions to Uplift Woodcarving Industry in Sri Lanka - Social and Community Project"
-    instituion: "Dept. of Mechanical Engineering"
+      - "Robot design & embedded control systems"
+      - "Navigation algorithms (autonomous movement)"
+      - "Sensor integration for obstacle detection"
+      - "Robotic system testing & optimization"
+  - title: "Social & Community Project – Uplifting Woodcarving Industry"
+    institution: "Dept. of Mechanical Engineering, UoM"
     year: "2024"
-    details: 
-      - "Developing strategic suggestions to uplift the woodcarving industry."
-      - "Process optimization" 
+    details:
+      - "Industry analysis & needs assessment"
+      - "Strategy development (finance, technology, market facilitation)"
+      - "Integration of modern technology with traditional craftsmanship"
+      - "Sustainability and skill transfer recommendations"
+      - "Policy & IP considerations"
+  - title: "Manufacturing Project – Rack with Spoon Handle"
+    institution: "Dept. of Mechanical Engineering, UoM"
+    year: "2022"
+    details:
+      - "Sheet metal fabrication"
+      - "Machining operations"
+      - "Welding & joining techniques"
+      - "Product design for usability"
 
 skillsAndCertifications:
   languages: ["C++", "C#", "Python", "MATLAB"]
@@ -112,4 +138,5 @@ skillsAndCertifications:
   writing: ["Research papers", "Technical Reports"]
   Languages: ["Sinhala (Native)", "English (Fluent)", "Hindi (Basic Conversational Level)", "Chinese (Basic Conversational Level)"]
   softSkills: ["Creativity", "Teamwork", "Critical Thinking", "Organization Skills"]
+---
 # This section can be left empty as all structured content is now in the front matter.

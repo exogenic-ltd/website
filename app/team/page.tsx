@@ -50,7 +50,7 @@ export default function Team() {
                     </h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                         {teamsContent?.header?.subtitle ||
-                            "A collection of members I've worked on, showcasing different technologies and problem-solving approaches."}
+                            "Meet the Brains Behind ExoGenicMeet the Brains Behind the Innovations at Exogenic"}
                     </p>
                 </div>
 
@@ -157,9 +157,21 @@ export default function Team() {
                                 <div className="flex items-center justify-between mb-3">
                                     <h3 className="text-xl font-bold text-white">{member.title}</h3>
                                 </div>
-                                {member.contact?.affiliation &&
+
+                                <p className="text-gray-300 mb-4">
+                                    {Array.isArray(member.contact?.affiliation)
+                                        ? member.contact.affiliation.map((line: string, i: number) => (
+                                            <span key={i}>
+                                                {line}
+                                                <br />
+                                            </span>
+                                        ))
+                                        : member.contact?.affiliation}
+                                </p>
+
+                                {/*member.contact?.affiliation &&
                                     <p className="text-gray-300 mb-4 line-clamp-3">{member.contact.affiliation}</p>
-                                }
+                                */}
                             </div>
                         </div>
                     ))}
@@ -169,11 +181,11 @@ export default function Team() {
                 <div className="text-center mt-16">
                     <div className="bg-gray-800/50 p-8 rounded-lg border border-blue-500/20">
                         <h2 className="text-2xl font-bold text-white mb-4">
-                            {teamsContent?.cta_section?.title || "Interested in Working Together?"}
+                            {teamsContent?.cta_section?.title || "Interested in Working Together With Us?"}
                         </h2>
                         <p className="text-gray-300 mb-6">
                             {teamsContent?.cta_section?.description ||
-                                "I'm always open to discussing new opportunities and interesting members."}
+                                "We are always open to discussing new opportunities and interesting members."}
                         </p>
                         <a
                             href={teamsContent?.cta_section?.button?.split(" | ")[1] || "/about"}

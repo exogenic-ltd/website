@@ -8,7 +8,11 @@ fullName: "R. A. Ruwan C. Gopura"
 profileImageUrl: "team-member/ruwan-gopura.jpg"
 contact:
   email: "gopurar@uom.lk"
-  affiliation: "Department of Mechanical Engineering, University of of Moratuwa, Sri Lanka"
+  affiliation: 
+    - "Dean"
+    - "Faculty of Gaduate Studies"
+    - "University of Moratuwa"
+    - "Sri Lanka"
   links:
     - name: "googleScholar"
       url: "https://scholar.google.com/citations?user=C4aX6bkAAAAJ&hl=en"

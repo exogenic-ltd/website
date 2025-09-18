@@ -7,7 +7,7 @@ draft: false
 weight: 10
 fullName: "Harindu Dulanjaya Bandara"
 contact:
-  affiliation: "Founder and CEO"
+  affiliation: "Co-founder and CEO"
   email: "harindudb@gmail.com"
   links:
     - name: "LinkedIn"
@@ -19,7 +19,7 @@ contact:
 academicQualifications:
   - id: 1
     degree: "Bsc.Hons Mechanical Engineering"
-    institution: "University of Moratuwa, Katubedda"
+    institution: "University of Moratuwa, Sri Lanka"
     years: "2020 – 2024"
     details:
       gpa: 3.52

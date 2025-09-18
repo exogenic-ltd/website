@@ -1,7 +1,7 @@
 ---
 header:
   title: "Our Team"
-  subtitle: "Meet the genius minds behind the innovations at Exogenic."
+  subtitle: "Meet the Brains Behind the Innovations at Exogenic."
 members:
   - id: 1
     name: "gopura"
@@ -19,13 +19,13 @@ members:
     name: "kulunu"
     category: "advisor"
   - id: 6
-    name: "vimukthi"
-    category: "team"
-  - id: 7
     name: "niseni"
     category: "team"
-  - id: 8
+  - id: 7
     name: "chulanga"
+    category: "team"
+  - id: 8
+    name: "vimukthi"
     category: "team"
 
 ctaSection:
